@@ -1,0 +1,75 @@
+{
+  "title": " Olympiad",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "DP",
+      "id": 4,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Used in optimisation problems<br>DP + combinatorics: to store repeating subproblems --&gt; so that you don't need to recalculate--much like a lookup table"
+        },
+        "style": {}
+      },
+      "ideas": {}
+    },
+    "2": {
+      "title": "Greedy",
+      "id": 2,
+      "attr": {
+        "style": {},
+        "attachment": {
+          "contentType": "text/html",
+          "content": "-<b>Local </b>optimisation at each step"
+        }
+      }
+    },
+    "-1": {
+      "title": "Graph",
+      "id": 6,
+      "ideas": {
+        "1": {
+          "title": "Graph Traversal",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "Dijkstra",
+              "id": 8,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "A generalization of the BFS algorithm,&nbsp; it is&nbsp; inherently a graph traversal algorithm, but you traverse in a different way:<br>not by number of edges from the source node(the closest to the source node are visited first-constituting layer 0, those nodes in layer 1 are those nodes nearest to the nodes in layer 0...)--&gt; this is how BFS traverses the graph<br>Dijkstra, on the other hand, visits the nodes in terms of distance from the source == sum of edge weights that must be traversed to get to that node"
+                },
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "BFS",
+                  "id": 10
+                }
+              }
+            },
+            "2": {
+              "title": "DFS",
+              "id": 9
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 2,
+      "ideaIdTo": 4,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "solid"
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,6 @@
-The Quickest and easiest way to find the mod of a negative number is by using the below property
-
+Method 1:
+We use the following mathematical property:
 if a = (b) mod c then a = (c*k + b) mod c (where k = 1,2,3.......) 
-
 It simply says that the value of a is unchanged when we add a multiple of c to b
 
 Example
@@ -28,3 +27,13 @@ Another example
 
 a = (-340) mod 60
 So a = (60*6 – 340) mod 60 = (360-340) mod 60 = 20 mod 60 = 20
+
+NOTE: The above is not very useful for code implementation since we do not know the value of the (multiple of c) to add to make
+a range between [0,n] 
+
+Method 2: much quicker + shorter implementation
+negative number modulo k = k minus positive number modulo k i.e  (−n)%k = k−(n%k)
+Ex: (−144)%5=5−(144%5)=5−(4)=1.
+or negative number modulo k =  negative number modulo k + k.
+since (negative number modulo k) will give a negative number adding k to it will give a positive number
+Ex: (-27)%13 = (-27)%13 + 13 = -1 + 13 = 12

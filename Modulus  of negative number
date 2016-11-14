@@ -1,0 +1,30 @@
+The Quickest and easiest way to find the mod of a negative number is by using the below property
+
+if a = (b) mod c then a = (c*k + b) mod c (where k = 1,2,3.......) 
+
+It simply says that the value of a is unchanged when we add a multiple of c to b
+
+Example
+
+a = (10) mod 3 we all know that a = 1 Now
+a = (3*1 + 10) mod 3 - a is still = 1
+a = (3*2 + 10) mod 3 - a is still = 1
+a = (3*3 + 10) mod 3 - a is still = 1
+a = (3*4 + 10) mod 3 - a is still = 1
+
+So adding any multiple of 3 (> 0) to 10 does not effect the value of a
+Now we use this to our advantage in finding mod of negative numbers
+
+Example
+
+a = (-10) mod 3
+Now i add 12 to 10 as 12 is a multiple of 3 and hence the value of a will remain unchanged
+
+so a = (3*4 – 10) mod 3 = 2 mod 3 = 2
+
+easy isnt it?
+
+Another example
+
+a = (-340) mod 60
+So a = (60*6 – 340) mod 60 = (360-340) mod 60 = 20 mod 60 = 20

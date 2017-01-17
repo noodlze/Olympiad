@@ -9,7 +9,8 @@ Generalised problem: how to find n mod b, where n is so large it needs to be sto
 let's find 123456789 mod 4
 123456789 = 1*(10^8) + 2*(10^7) + 3*(10^6) + ....
 Method: use powmod to find 10^8, 10^7... since exponent cannot be larger than 10^5 this is possible
-use aritmetic rules to caculate required answer
+use arithmetic rules to caculate required answer
+
 Second method: finding (x^n)mod 5 where n is a string
 Generalised problem: powmod: (x^n)mod p in the case where n is so large that it is stored as a string
 let's find (x^1234)mod 5

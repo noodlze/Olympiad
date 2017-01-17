@@ -1,2 +1,2 @@
 B. Feyda and Math
-C. Divisibility by Eight
+C. Divisibility by Eight(+DP)

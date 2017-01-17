@@ -3,5 +3,29 @@ To acquaint yourself with applying the modulo arithmetic rules:
 (a-b)%m = ((a%m)-(b%m))%m
 (a*b)%m = ((a%m)*(b%m))%m
 
-B. Feyda and Math: how to find n mod b, where n is so large it needs to be stored in a string, also may need to use modpow
+B. Feyda and Math: 
+First method: finding (n mod 4) where n is a string
+Generalised problem: how to find n mod b, where n is so large it needs to be stored in a string
+let's find 123456789 mod 4
+123456789 = 1*(10^8) + 2*(10^7) + 3*(10^6) + ....
+Method: use powmod to find 10^8, 10^7... since exponent cannot be larger than 10^5 this is possible
+use aritmetic rules to caculate required answer
+Second method: finding (x^n)mod 5 where n is a string
+Generalised problem: powmod: (x^n)mod p in the case where n is so large that it is stored as a string
+let's find (x^1234)mod 5
+again 1234= 1*(10^3) + 2*(10^2)+...
+so x^1234 = x^(1*1000 + 2*100 + 3*10 + 4) = x^(1*1000) * x^(2*100) * x^(3*10) * x^4
+This is a method we use to calculate the above:(idea can be thought of as based on DP)
+bottom up:
+x^1 ( let this be a0)
+( [(x^1)]^10 ) * (x^2) = x^12 = a1 = (ao^10) * (x^2)
+( [((x^1)^10) * (x^2)]^10 ) * (x^3) = x^123 = a2 = (a1^10) * (x^3)
+( [((((x^1)^10) * (x^2))^10) * (x^3)]^10 ) * (x^4) = x^1234 = (a2^10) * (x^4)
+top-down:
+x^1234 = ((x^123)^10)*(x^4)
+x^123 = ((x^12)^10)*(x*3)
+x^12 = ((x^1)^10)*(x^2)
+and that is one method to reduce the exponent to a small enough value that they can be stored in c++ data type
+
 C. Divisibility by Eight(requires use of DP): uses a similar idea to prev problem
+uses the same idea as the 2nd method in the prev question

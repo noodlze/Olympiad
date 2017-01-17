@@ -1,2 +1,7 @@
-B. Feyda and Math
-C. Divisibility by Eight(+DP)
+To acquaint yourself with applying the modulo arithmetic rules:
+(a+b)%m = ((a%m)+(b%m))%m
+(a-b)%m = ((a%m)-(b%m))%m
+(a*b)%m = ((a%m)*(b%m))%m
+
+B. Feyda and Math: how to find n mod b, where n is so large it needs to be stored in a string, also may need to use modpow
+C. Divisibility by Eight(requires use of DP): uses a similar idea to prev problem

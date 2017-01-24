@@ -32,7 +32,9 @@ NOTE: The above is not very useful for code implementation since we do not know 
 a range between [0,n] 
 
 Method 2: much quicker + shorter implementation
-negative number modulo k = k minus positive number modulo k i.e  (−n)%k = k−(n%k)
+negative number modulo k = k minus positive number modulo k i.e  (−n)%k = (k−(n%k))%k
+NOTE: need to mod it the result of k-(n%k) in the case where n = -k, it will give k as the result-> but this is incorrect, 
+should be 0.
 Ex: (−144)%5=5−(144%5)=5−(4)=1.
 or negative number modulo k =  negative number modulo k + k.
 since (negative number modulo k) will give a negative number adding k to it will give a positive number

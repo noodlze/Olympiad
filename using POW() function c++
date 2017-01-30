@@ -1,0 +1,23 @@
+When doing integer powers i.e. 10^2 and you use the pow() function, there may be errors when rounding off the double vlaue to 
+a integer value(so you get 99 instead of 100):
+
+**Solution 1**:
+In general (but not always), when you convert doubles to integers, you call round(). Eg:
+int i = (int) round(pow(10,j));
+If your C library doesn't have this, you can emulate:
+#define round(x) floor((x)+0.5)
+
+__COMMENTS__: I use ceil(pow(a,b)), it works for the question B. Little Dima and Equation
+
+
+**Solution 2**:
+Write a proper integer power function, or when the exponent is known, just write out the multiplication directly i.e 10*10 to 
+calculate 10^2.
+ll poww(ll a, ll b)
+{
+    ll res = 1;
+    for(int i = 1; i<=b; ++i)
+        res *= a;
+
+    return res;
+}

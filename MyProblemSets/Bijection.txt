@@ -1,0 +1,5 @@
+Core problem: Is there a valid bijection from the elements in this function and the elements in the second function?
+
+1. Dasha and friends(http://codeforces.com/problemset/problem/761/B)
+
+2.Santa Claus and Keyboard Check (http://codeforces.com/problemset/problem/752/B)
